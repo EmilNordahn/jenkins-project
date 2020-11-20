@@ -6,3 +6,18 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+
+pipelineJob('test-pipeline-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/EmilNordahn/techPipelineGradleTest.git'
+                    }
+                    branch 'master'
+                }
+            }
+        }
+    }
+}
